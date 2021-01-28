@@ -33,14 +33,39 @@
     display: block;
 
 } */
-
-
-
 .cardSpacer{
     margin: 20px;
-    padding: 20px;
+    padding: 15px;
+    
 }
-
+.card{
+    background-color: #FAFAFA !important ;
+}
+.card-header{
+    text-align: center;
+}
+.spacer{
+    margin: 20px;
+}
 .rowSpacer{
     margin:15px;
+}
+.submitButton{
+    margin-top: 10px;
+    border-radius: 20px !important;
+    text-align: center;
+    width: 200px;
+}
+
+.textArrange{
+    text-align: center;
+    margin-top: 50px;
+}
+.imgArrange{
+    text-align: center;
+    margin-top: 5px;
+}
+img{
+    width: 200px;
+
 }
