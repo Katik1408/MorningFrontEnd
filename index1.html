@@ -3,9 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Document</title>
+
+    <style>
+        .clippy{
+            background-color: aqua;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+        }
+    </style>
+
 </head>
 <body>
-    <p>Page2</p>
+    <div class="clippy"></div>
+    
 </body>
 </html>

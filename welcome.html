@@ -17,6 +17,9 @@
     
     <script src="app.js"></script>   
 
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+
   </head>
   <body>
 
@@ -42,13 +45,57 @@
         </span>
       </div>
     </nav>
-
+    <p id="p1"></p>
     <p>
-        <h1>
-            Welcome Aboard!
+        <h1 id="greet" >
+            
         </h1>
+
+        <section>
+          
+          <div class="container">
+            <div class="card">
+            <div class="row">
+              <div id="uname" class="col-md-6"></div>
+            <div id="eid" class="col-md-6"></div>
+          </div>
+        </div>
+        </section>
+
     </p>
-  
+
+    <script>
+      const urlParameters = new URLSearchParams(window.location.search);
+      const uname = urlParameters.get('username');
+      const email = urlParameters.get('emailid');
+      console.log(uname);
+      if(uname!== ""){
+      document.getElementById('greet').innerHTML = 'Welcome ' + uname; 
+      }
+      else{
+        document.getElementById('greet').innerHTML = 'Default'
+      }
+
+      document.getElementById('uname').innerHTML = uname;
+      document.getElementById('eid').innerHTML = email;
+
+
+    </script>
+
+
+
+    <!-- <script>
+      const urlParameters = new URLSearchParams(window.location.search);
+      let uname = urlParameters.get('username');
+      console.log(uname);
+      //document.getElementById("p1").innerHTML = 'Hello';
+      if(uname !== ""){
+        document.getElementById('greet1').innerHTML = 'Welcome ' + uname; 
+      }
+      else{
+        document.getElementById('username').innerHTML = 'Default';
+      }
+      </script> -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

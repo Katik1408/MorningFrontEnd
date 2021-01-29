@@ -178,13 +178,14 @@ function validateForm() {
     uError.style.color = "red";
     username.style.border = "2px solid red";
     return false;
-  } else if (pwd.value == "") {
-    ePwd.innerHTML = "Password cannot be blank";
+  } else if (pwd.value == "" || pwd.value.length < 6) {
+    ePwd.innerHTML =
+      "Password cannot be blank and should be more than 6 characters";
     ePwd.style.color = "red";
     pwd.style.border = "2px solid red";
     return false;
-  } else if (cpwd.value == "") {
-    eCpwd.innerHTML = "Confirm Password cannot be blank";
+  } else if (cpwd.value == "" || cpwd.value.length < 6) {
+    eCpwd.innerHTML = "Confirm Password cannot be blank and should be more than 6 Characters";
     eCpwd.style.color = "red";
     cpwd.style.border = "2px solid red";
     return false;
